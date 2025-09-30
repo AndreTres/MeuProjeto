@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betano - Casa de Apostas</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>BETANO</h1>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Início</a></li>
+                        <li class="dropdown">
+                            <a href="#games" class="nav-link">Jogos <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#football">Futebol</a></li>
+                                <li><a href="#basketball">Basquete</a></li>
+                                <li><a href="#tennis">Tênis</a></li>
+                                <li><a href="#esports">E-sports</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#casino" class="nav-link">Cassino</a></li>
+                        <li><a href="#promotions" class="nav-link">Promoções</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Login</button>
+                    <button class="btn btn-primary">Cadastrar</button>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="container">
+                        <h2>Bem-vindo à Betano</h2>
+                        <p>A maior casa de apostas do Brasil</p>
+                        <button class="btn btn-primary btn-large">Começar Agora</button>
+                    </div>
+                </div>
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="container">
+                        <h2>Promoção Especial</h2>
+                        <p>100% de bônus no seu primeiro depósito</p>
+                        <button class="btn btn-primary btn-large">Aproveitar</button>
+                    </div>
+                </div>
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="container">
+                        <h2>Cassino Online</h2>
+                        <p>Jogos de cassino com os melhores prêmios</p>
+                        <button class="btn btn-primary btn-large">Jogar Agora</button>
+                    </div>
+                </div>
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Seção de Jogos -->
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title">Jogos em Destaque</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Futebol">
+                        <div class="game-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Futebol</h3>
+                        <p>Campeonatos do mundo todo</p>
+                        <span class="live-indicator">AO VIVO</span>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Basquete">
+                        <div class="game-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Basquete</h3>
+                        <p>NBA, NBB e muito mais</p>
+                        <span class="live-indicator">AO VIVO</span>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tênis">
+                        <div class="game-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Tênis</h3>
+                        <p>Grand Slams e torneios</p>
+                        <span class="live-indicator">AO VIVO</span>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="E-sports">
+                        <div class="game-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>E-sports</h3>
+                        <p>CS:GO, LoL, Dota 2</p>
+                        <span class="live-indicator">AO VIVO</span>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cassino">
+                        <div class="game-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Cassino</h3>
+                        <p>Slots, Blackjack, Roleta</p>
+                        <span class="live-indicator">AO VIVO</span>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Poker">
+                        <div class="game-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Poker</h3>
+                        <p>Texas Hold'em e mais</p>
+                        <span class="live-indicator">AO VIVO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Promoções -->
+    <section class="promotions-section">
+        <div class="container">
+            <h2 class="section-title">Promoções Especiais</h2>
+            <div class="promotions-grid">
+                <div class="promo-card">
+                    <div class="promo-badge">NOVO</div>
+                    <h3>Bônus de Boas-vindas</h3>
+                    <p>100% de bônus até R$ 500 no seu primeiro depósito</p>
+                    <button class="btn btn-primary">Aproveitar</button>
+                </div>
+                
+                <div class="promo-card">
+                    <div class="promo-badge">HOT</div>
+                    <h3>Cashback Diário</h3>
+                    <p>Receba 10% de cashback em todas as suas apostas</p>
+                    <button class="btn btn-primary">Aproveitar</button>
+                </div>
+                
+                <div class="promo-card">
+                    <div class="promo-badge">LIMITADO</div>
+                    <h3>Rodadas Grátis</h3>
+                    <p>50 rodadas grátis no cassino para novos usuários</p>
+                    <button class="btn btn-primary">Aproveitar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Betano</h3>
+                    <p>A maior casa de apostas do Brasil com os melhores jogos e promoções.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Jogos</h4>
+                    <ul>
+                        <li><a href="#">Futebol</a></li>
+                        <li><a href="#">Basquete</a></li>
+                        <li><a href="#">Tênis</a></li>
+                        <li><a href="#">E-sports</a></li>
+                        <li><a href="#">Cassino</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Depósitos</a></li>
+                        <li><a href="#">Saques</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Responsabilidade</h4>
+                    <ul>
+                        <li><a href="#">Jogue com Responsabilidade</a></li>
+                        <li><a href="#">18+</a></li>
+                        <li><a href="#">Ajuda com Jogos</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Betano. Todos os direitos reservados. | Jogue com responsabilidade. Proibido para menores de 18 anos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
