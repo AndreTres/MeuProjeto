@@ -9,7 +9,7 @@ backend/
 ├── config.php          # Configuração do banco de dados
 ├── register.php        # Cadastro de usuários
 ├── login.php          # Login de usuários
-├── list_users.php     # Listagem de usuários
+├── list_users.php     # Listagem de usuários em HTML
 ├── database_setup.sql # Script de criação do banco
 └── README.md          # Este arquivo
 ```
@@ -18,7 +18,7 @@ backend/
 
 1. Execute o script `database_setup.sql` no phpMyAdmin ou MySQL Workbench
 2. O script criará:
-   - Banco de dados: `meu_sistema`
+   - Banco de dados: `meuprojeto`
    - Tabela: `users` com campos id, email, password, created_at
 
 ## Configuração do Ambiente
@@ -32,94 +32,35 @@ backend/
 - Host: localhost
 - Usuário: root
 - Senha: (vazia)
-- Banco: meu_sistema
+- Banco: meuprojeto
 
-## Endpoints Disponíveis
+## Como Usar
 
 ### 1. Cadastro de Usuário
-**POST** `/register.php`
-
-**Parâmetros:**
-- `email` (string, obrigatório)
-- `password` (string, obrigatório, mínimo 6 caracteres)
-
-**Exemplo de uso:**
-```bash
-curl -X POST http://localhost/backend/register.php \
-  -d "email=usuario@teste.com" \
-  -d "password=123456"
-```
-
-**Resposta de sucesso:**
-```json
-{
-  "success": true,
-  "message": "Usuário cadastrado com sucesso!",
-  "data": {
-    "id": 1,
-    "email": "usuario@teste.com",
-    "created_at": "2024-01-01 12:00:00"
-  }
-}
-```
+- Acesse a seção "Cadastrar Usuário" no site principal
+- Preencha email e senha (mínimo 6 caracteres)
+- Clique em "Cadastrar"
+- Será redirecionado para uma página de confirmação
 
 ### 2. Login de Usuário
-**POST** `/login.php`
-
-**Parâmetros:**
-- `email` (string, obrigatório)
-- `password` (string, obrigatório)
-
-**Exemplo de uso:**
-```bash
-curl -X POST http://localhost/backend/login.php \
-  -d "email=usuario@teste.com" \
-  -d "password=123456"
-```
-
-**Resposta de sucesso:**
-```json
-{
-  "success": true,
-  "message": "Login realizado com sucesso!",
-  "data": {
-    "id": 1,
-    "email": "usuario@teste.com",
-    "created_at": "2024-01-01 12:00:00"
-  }
-}
-```
+- Acesse a seção "Fazer Login" no site principal
+- Digite email e senha cadastrados
+- Clique em "Entrar"
+- Será redirecionado para uma página de boas-vindas
 
 ### 3. Listagem de Usuários
-**GET** `/list_users.php`
+- Após fazer login, clique em "Ver todos os usuários"
+- Ou acesse diretamente: `http://localhost/backend/list_users.php`
+- Visualize todos os usuários cadastrados em uma tabela HTML
 
-**Exemplo de uso:**
-```bash
-curl http://localhost/backend/list_users.php
-```
+## Formulários HTML
 
-**Resposta de sucesso:**
-```json
-{
-  "success": true,
-  "message": "Lista de usuários obtida com sucesso!",
-  "data": {
-    "total": 2,
-    "users": [
-      {
-        "id": 2,
-        "email": "admin@teste.com",
-        "created_at": "2024-01-01 13:00:00"
-      },
-      {
-        "id": 1,
-        "email": "usuario@teste.com",
-        "created_at": "2024-01-01 12:00:00"
-      }
-    ]
-  }
-}
-```
+O sistema agora inclui formulários HTML integrados no `index.html`:
+
+- **Seção de Cadastro** (`#cadastro`): Formulário para cadastrar novos usuários
+- **Seção de Login** (`#login`): Formulário para autenticação de usuários
+
+Ambos os formulários enviam dados via POST para os respectivos endpoints PHP.
 
 ## Segurança Implementada
 

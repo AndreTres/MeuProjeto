@@ -10,12 +10,12 @@ require_once 'config.php';
 
 // Verifica se a requisição é POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    jsonResponse(false, 'Método não permitido. Use POST.');
+    die('Método não permitido. Use POST.');
 }
 
 // Verifica se os campos obrigatórios foram enviados
 if (!isset($_POST['email']) || !isset($_POST['password'])) {
-    jsonResponse(false, 'Campos obrigatórios: email e password');
+    die('Campos obrigatórios: email e password');
 }
 
 // Obtém e sanitiza os dados
@@ -24,17 +24,17 @@ $password = $_POST['password'];
 
 // Validações básicas
 if (empty($email) || empty($password)) {
-    jsonResponse(false, 'Email e password são obrigatórios');
+    die('Email e password são obrigatórios');
 }
 
 // Validação de email
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    jsonResponse(false, 'Email inválido');
+    die('Email inválido');
 }
 
 // Validação de senha (mínimo 6 caracteres)
 if (strlen($password) < 6) {
-    jsonResponse(false, 'A senha deve ter pelo menos 6 caracteres');
+    die('A senha deve ter pelo menos 6 caracteres');
 }
 
 try {
@@ -43,7 +43,7 @@ try {
     $stmt->execute([$email]);
     
     if ($stmt->rowCount() > 0) {
-        jsonResponse(false, 'Este email já está cadastrado');
+        die('Este email já está cadastrado');
     }
     
     // Criptografa a senha usando password_hash
@@ -54,20 +54,17 @@ try {
     $result = $stmt->execute([$email, $hashedPassword]);
     
     if ($result) {
-        // Busca os dados do usuário recém-criado
-        $stmt = $pdo->prepare("SELECT id, email, created_at FROM users WHERE email = ?");
-        $stmt->execute([$email]);
-        $user = $stmt->fetch();
-        
-        jsonResponse(true, 'Usuário cadastrado com sucesso!', $user);
+        echo '<h2 style="color: green; text-align: center; margin: 20px;">Usuário cadastrado com sucesso!</h2>';
+        echo '<p style="text-align: center; margin: 20px;">Email: ' . htmlspecialchars($email) . '</p>';
+        echo '<p style="text-align: center; margin: 20px;"><a href="../index.html" style="color: #FF4B00; text-decoration: none;">Voltar ao início</a></p>';
     } else {
-        jsonResponse(false, 'Erro ao cadastrar usuário');
+        die('Erro ao cadastrar usuário');
     }
     
 } catch (PDOException $e) {
     // Log do erro (em produção, use um sistema de logs adequado)
     error_log("Erro no cadastro: " . $e->getMessage());
-    jsonResponse(false, 'Erro interno do servidor');
+    die('Erro interno do servidor');
 }
 ?>
 

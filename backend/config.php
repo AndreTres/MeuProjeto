@@ -6,7 +6,7 @@
 
 // Configurações do banco de dados
 $host = 'localhost';
-$dbname = 'meu_sistema';
+$dbname = 'meuprojeto';
 $username = 'root';  // Usuário padrão do WampServer
 $password = '';      // Senha padrão do WampServer (vazia)
 

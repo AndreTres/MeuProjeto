@@ -2,12 +2,12 @@
 -- Execute este script no phpMyAdmin ou MySQL Workbench
 
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS meu_sistema 
+CREATE DATABASE IF NOT EXISTS meuprojeto 
 CHARACTER SET utf8mb4 
 COLLATE utf8mb4_unicode_ci;
 
 -- Seleciona o banco de dados
-USE meu_sistema;
+USE meuprojeto;
 
 -- Criação da tabela users
 CREATE TABLE IF NOT EXISTS users (
